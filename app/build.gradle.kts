@@ -6,7 +6,14 @@ plugins {
 }
 
 android {
-    namespace = "com.cosmoquest.app"
+// Include Kotlin files currently stored in app/app/src/main/java.
+sourceSets {
+getByName("main") {
+java.srcDir("app/src/main/java")
+}
+}
+
+namespace = "com.cosmoquest.app"
     compileSdk = 35
 
     defaultConfig {
